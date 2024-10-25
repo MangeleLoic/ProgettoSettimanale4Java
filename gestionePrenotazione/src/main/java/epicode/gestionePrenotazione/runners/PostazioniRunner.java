@@ -5,7 +5,6 @@ import com.github.javafaker.Faker;
 import epicode.gestionePrenotazione.entities.Edificio;
 import epicode.gestionePrenotazione.entities.Postazione;
 import epicode.gestionePrenotazione.entities.Tipo;
-import epicode.gestionePrenotazione.entities.Utente;
 import epicode.gestionePrenotazione.services.EdificioService;
 import epicode.gestionePrenotazione.services.PostazioneService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,7 @@ public class PostazioniRunner implements CommandLineRunner {
 
         for(int i=0; i <5; i++) {
             Edificio newEdificio = new Edificio(faker.company().name(),faker.address().fullAddress(),faker.address().city());
-            edificioService.saveEdificio(newEdificio);
+              edificioService.saveEdificio(newEdificio); // Riga commentata per evitare ulteriori aggiunte nel db
             edifici.add(newEdificio);
         }
 
@@ -45,7 +44,7 @@ public class PostazioniRunner implements CommandLineRunner {
                         edificio);
                 postazioni.add(newPostazione);
             }
-            postazioneService.saveManyPostazioni(postazioni);
+             postazioneService.saveManyPostazioni(postazioni); // Riga commentata per evitare ulteriori aggiunte nel db
         }
 
     }

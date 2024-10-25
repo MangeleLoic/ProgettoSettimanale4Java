@@ -1,7 +1,6 @@
 package epicode.gestionePrenotazione.services;
 
 import epicode.gestionePrenotazione.entities.Edificio;
-import epicode.gestionePrenotazione.entities.Postazione;
 import epicode.gestionePrenotazione.exceptions.ValidationException;
 import epicode.gestionePrenotazione.repositories.EdificioRepository;
 import lombok.extern.slf4j.Slf4j;

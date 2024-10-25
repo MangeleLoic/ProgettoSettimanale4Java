@@ -24,7 +24,7 @@ public class UtenteService {
         if (utente1.isPresent()) {
             throw new ValidationException("utente con username " +utente.getUsername() + " già esistente");
         }
-       // utenteRepository.save(utente);
+        utenteRepository.save(utente); //Riga commentata per evitare ulteriori aggiunte nel db
     }
 
     public void saveMany(List<Utente> newUtenti) {
@@ -36,6 +36,10 @@ public class UtenteService {
                 log.error(ex.getMessage());
             }
         }
+    }
+
+    public List<Utente> findAll() {
+        return utenteRepository.findAll();
     }
 
 
