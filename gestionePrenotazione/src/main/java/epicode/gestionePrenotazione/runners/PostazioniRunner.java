@@ -33,7 +33,7 @@ public class PostazioniRunner implements CommandLineRunner {
 
         for(int i=0; i <5; i++) {
             Edificio newEdificio = new Edificio(faker.company().name(),faker.address().fullAddress(),faker.address().city());
-              edificioService.saveEdificio(newEdificio); // Riga commentata per evitare ulteriori aggiunte nel db
+              edificioService.saveEdificio(newEdificio);
             edifici.add(newEdificio);
         }
 
@@ -44,7 +44,7 @@ public class PostazioniRunner implements CommandLineRunner {
                         edificio);
                 postazioni.add(newPostazione);
             }
-             postazioneService.saveManyPostazioni(postazioni); // Riga commentata per evitare ulteriori aggiunte nel db
+            postazioneService.saveManyPostazioni(postazioni);
         }
 
     }

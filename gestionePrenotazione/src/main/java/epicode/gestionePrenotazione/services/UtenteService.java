@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.ErrorManager;
+
 
 
 @Service
@@ -24,7 +24,7 @@ public class UtenteService {
         if (utente1.isPresent()) {
             throw new ValidationException("utente con username " +utente.getUsername() + " già esistente");
         }
-        utenteRepository.save(utente); //Riga commentata per evitare ulteriori aggiunte nel db
+        utenteRepository.save(utente);
     }
 
     public void saveMany(List<Utente> newUtenti) {
