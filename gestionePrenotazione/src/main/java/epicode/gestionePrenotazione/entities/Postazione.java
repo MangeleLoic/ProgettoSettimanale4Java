@@ -27,7 +27,7 @@ public class Postazione {
     @JoinColumn(name = "edificio_id",nullable = false)
     private Edificio edificio;
 
-    public Postazione(Long id, String descrizione, int numeroMaxOccupanti, Tipo tipoPostazione, Edificio edificio) {
+    public Postazione(String descrizione, int numeroMaxOccupanti, Tipo tipoPostazione, Edificio edificio) {
         this.id = id;
         this.descrizione = descrizione;
         this.numeroMaxOccupanti = numeroMaxOccupanti;

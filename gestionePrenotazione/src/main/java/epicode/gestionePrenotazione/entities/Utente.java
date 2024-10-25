@@ -18,15 +18,17 @@ public class Utente {
     private Long id;
     @Column(unique = true, nullable = false)
     private String username;
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String fullName;
     @Column(unique = true)
     private String email;
 
-    public Utente(Long id, String username, String fullName, String email) {
-        this.id = id;
+    public Utente( String username, String fullName, String email) {
+
         this.username = username;
         this.fullName = fullName;
         this.email = email;
     }
+
+
 }

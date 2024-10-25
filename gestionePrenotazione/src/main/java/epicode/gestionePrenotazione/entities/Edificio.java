@@ -24,8 +24,8 @@ public class Edificio {
     @Column(nullable = false)
     private String citta;
 
-    public Edificio(Long id, String nome, String indirizzo, String citta) {
-        this.id = id;
+    public Edificio( String nome, String indirizzo, String citta) {
+
         this.nome = nome;
         this.indirizzo = indirizzo;
         this.citta = citta;
